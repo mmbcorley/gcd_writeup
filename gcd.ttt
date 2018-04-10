@@ -1,0 +1,30 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\caption{Object clicks}
+\label{table:e7_clicks}
+\begin{tabularx}{\linewidth}{YYYYY}
+\hline
+& No Gesture & Different Posture & Trunk Movement & Adaptor Gesture \\
+Clicks to Referent & 63.8\% & 48.0\% & 49.7\% & 41.5\%  \\
+Clicks to Distractor & 36.2\% & 52.0\% & 50.3\% & 58.5\% \\
+\hline
+\end{tabularx}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\caption{Object clicks}
+\label{table:e8_clicks}
+\begin{tabularx}{\linewidth}{YYY}
+\hline
+& No Gesture & Gesture \\
+Clicks to Referent & 80.9\% & 24.2\%  \\
+Clicks to Distractor & 19.1\% & 75.8\%  \\
+\hline
+\end{tabularx}
+\end{table*}
+\efloatseparator
+ 
