@@ -179,6 +179,7 @@ Stimuli were displayed on a 21~in.\@ CRT monitor, placed 850~mm from an Eyelink~
 Audio was presented in stereo from speakers on either side of the monitor. 
 Mouse coordinates were sampled at the frame rate of the videos (25~fps). 
 The experiment was presented using OpenSesame version~3.1 \citep{Mathot2012}.
+Eye movements, mouse coordinates and object clicked (referent or distractor) were recorded for each trial.
 
 % Jia: We need to describe the task a bit more (what participants were told, what they saw on the screen, what their task was etc. Am going to expand this a little bit
  
@@ -190,25 +191,26 @@ Figure \ref{fig:v1_trial} presents a sample trial from the experiment.
   \label{fig:v1_trial}
 \end{figure}
 Between trials, participants underwent a manual drift correct, after which the fixation dot turned red for 500ms. 
-The two objects (referent and distractor) were displayed on the screen for 2000ms.
-After this, the video appeared and the cursor was centred and made visible.
-Playback of the utterance began after the speech onset 
+After this, the two objects (referent and distractor) were displayed on the screen for 2000ms.
+The video then appeared and the cursor was centred and made visible.
+Playback of the utterance began after the variable speech onset associated with each video (Mean = 1410ms, SD = 410 ms). 
 %After a given time (M=1410ms, sd=410ms), the utterance began. 
-Participants were instructed to click on the object behind which they believed the treasure to be hidden.
-The instructions emphasised that the videos participants would see were recorded from a previous experiment, in which the speaker had to describe the location of some hidden treasure with the aim of misleading the listener into choosing the wrong location %in which one participant had to deceive another as to the location of some hidden treasure.
 
-\subsection{Bonus Rounds}
-To maintain motivation throughout the study, participants were told that there were a number of ``hidden bonus rounds'' which offered more treasure. 
-Following 25\% of the filler trials, a ``bonus round'' message appeared before progressing to the next trial.
-This informed participants that they had successfully located bonus treasure (regardless of the object chosen).
-Half of these appeared on randomly chosen trials in the gesture condition, and the other half in the no-gesture condition.
+The instructions emphasised that the videos participants saw were recorded from a previous experiment, in which the speaker had to describe the location of some hidden treasure with the aim of misleading the listener into choosing the wrong location %in which one participant had to deceive another as to the location of some hidden treasure.
+Participants were instructed to click on the object behind which \textit{they believed} the treasure to be hidden, with the overall aim of accumulating as much treasure as they could across the experiment.
+Participants received no feedback after their object clicks, except on bonus filler trials, which are described in the next section.
 
-Participants were also told that the top scorers would be able to enter their names on a high-score table, which was shown at the beginning of the experiment. 
+% Jia: moved this here from the section below because it isn't directly releant to Bonus Rounds
 
 Participants completed five practice trials (one of which was presented as a bonus round) prior to the main experiment. 
 Two of these were static, two displayed the speaker in different postures, and one displayed the speaker making a trunk movement.
 
-Eye movements, mouse coordinates and object clicked (referent or distractor) were recorded for each trial.
+\subsection{Bonus Rounds}
+To maintain motivation throughout the study, participants were told that there were a number of ``hidden bonus rounds'' which offered more treasure than regular rounds.
+25\% of filler trials (half in the gesture condition; half in the no-gesture condition) were randomly designated as bonus rounds for each participant.
+These trials were visually identical to regular trials, with the exception of a message informing participants that they had successfully located bonus treasure following their mouse click (regardless of the object chosen).
+
+Participants were also told that the top scorers would be able to enter their names on a high-score table, which was shown at the beginning of the experiment. 
 
 \subsection{Post-test Questionnaire}
 Participants were asked to complete a short post-test questionnaire. 
@@ -219,7 +221,8 @@ All participants were subsequently debriefed (told that the audio and video were
 \section{Results}
 Twenty-four native English speaking participants took part in the experiment for a desired sample size of twenty. 
 Participants were recruited from the University of Edinburgh community, and participated in return for a payment of \pounds{}4.
-Four participants who indicated suspicion of the proposed origins of the audiovisual stimuli, and their data was removed from all analysis.
+%Four participants who indicated suspicion of the proposed origins of the audiovisual stimuli, and their data was removed from all analysis.
+Data from four participants who indicated suspicion of the proposed origins of the audiovisual stimuli based on the post-test questionnaire were removed from all analyses.
 
 \subsection{Analysis}
 Analysis was carried out in R version~3.4.4 \citep{Rbase2017}, using the lme4 package \citep{Bates2015}. 
