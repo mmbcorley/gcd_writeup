@@ -233,17 +233,15 @@ Random intercepts and slopes for gesture type and video-to-speech were included 
 Reaction times (measured from referent onset) were modelled with the same fixed and random effect structure.
 Following \citet{Lo2015}, we compared mixed effects logistic regression models which specified an identity link function, assuming gaussian, gamma and inverse gaussian distributions.
 
-In previous studies using the treasure game paradigm, eye- and mouse- movements have been analysed over the time window starting at the onset of the referent name and extending for 800~ms; just beyond the duration of the longest referent (800~ms). 
-Because the current study includes in the analysis all available referents (rather than the subset used in previous experiments) the longest referent is 1062~ms, and so this window is extended to 1100~ms.
-Visual inspection of the time-course of proportions of fixations towards either object suggested that there may be a later effect of gestures in the decision of which object to click. 
-Growth curve analysis (See \citealt{Mirman2008}) was used to investigate this further, over the time window from referent onset to 1815~ms post-onset (mean click time).
+In previous studies using the treasure game paradigm, eye- and mouse- movements have been analysed over the time window starting at the onset of the referent name and extending for 800~ms; just beyond the duration of the longest referent (800~ms). % Jia: can't check right now but the duration of the longest referent (figure in brackets) was 700-and-something ms I think, not 800
+Because the current study includes in the analysis all available referents (rather than the subset used in previous experiments), this window is extended to 0--1100~ms to include the duration of the longest referent (1062~ms) %the longest referent is 1062~ms, and so this window is extended to 1100~ms.
 
 Eye fixation data was averaged into 20~ms bins (of 10 samples) prior to analysis.
 For each bin, we calculated the proportions of time spent fixating referent or the distractor, resulting in a measure of the proportions of fixations on either object over time.
 
 The position of the mouse was sampled every 40~ms.
 Using the $X$ coordinates only, we calculated the number of screen pixels moved and the direction of movement (towards either referent or distractor).
-We then calculated the cumulative distance travelled towards each object over time as a proportion of the cumulative distance travelled in either direction.
+We then calculated the cumulative distance travelled towards each object over time as a proportion of the cumulative distance travelled in both directions up until that time bin.
 Movements beyond the outer edge of either object were considered to be `overshooting' and were not included in calculations (0.8\% of samples).
 Eye- and mouse- biases were calculated from the proportions of referent to distractor fixations, and were subsequently empirical logit transformed \citep{Barr2008}. 
 In these measures, a value of zero indicates no bias towards either object, and positive and negative values indicate a bias towards the referent and distractor respectively.
@@ -252,11 +250,13 @@ Eye and mouse data was modelled over the time window from 0 to 1100~ms post-refe
 Random intercepts and slopes for time were included both by-referent and by-participant, along with by-participant random effects of gesture type.
 Following \citet{Baayen2008}, we considered effects in these models to be significant where $|t|>2$.
 
-Growth curve analysis over the time window from 0 to 1815~ms post-referent onset included 3 degrees of orthogonal polynomials for time, based on the pattern of the elogit referent-distractor bias having 2 turning points. 
+% Jia: moved these sentences from above here so we're just talking about the regular elogit models first and then the growth curve models next, otherwise we seem to be going back and forth between describing the two
+As visual inspection of the time-course of fixations towards either object suggested that there was a later effect of gestures in participants' decision of which object to click on, growth curve analysis (See \citealt{Mirman2008}) was used to investigate this further. 
+This analysis was conducted over the time window from 0 to 1815~ms post-referent onset included 3 degrees of orthogonal polynomials for time, based on the pattern of the elogit referent-distractor bias having 2 turning points. 
 These time polynomials, along with their interaction with gesture type, were included as fixed effects in a linear mixed effects model, with random intercepts and slopes for all time polynomials both by-participant and by-referent.
 
 
-\subsection{Mouse clicks}
+\subsection{Object clicks} % Jia: changed from 'mouse'->'object' for consistency with what we're calling it in the section above
 Across the experiment, participants clicked on the referent in 55\% of trials and the distractor in only 45\%.
 Table \ref{table:v1_clicks} shows the proportions of clicks to either object following different types of gesture.
 When presented with an utterance accompanied by no-gesturing, participants showed a bias toward a final interpretation of the utterance as truthful, with more clicks to the referent than the distractor \resultsLog{0.62}{0.16}{<0.001}.
