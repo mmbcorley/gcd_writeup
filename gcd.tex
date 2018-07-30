@@ -44,7 +44,7 @@ The emergence of deception-judgments based on visual cues appear to be more grad
 
 \shorttitle{What do liars look like?}
 \maketitle
-
+\linenumbers
 \noindent
 That people deceive one another is an inescapable aspect of everyday communication.
 After studying participants' social interactions over a one week period, \citet{DePaulo1996} concluded that people lie on average twice a day.
@@ -107,6 +107,13 @@ Participants are tasked with clicking on where they believe the treasure to be h
 We employ 3 types of visual cues --- trunk movements, adaptor gestures, and different postures --- and investigate whether listeners associate any of these with deception.
 %% (add) Our results show that...
 
+%JK 
+%The three types of visual cue provided distinct sets of stimuli when paired with speech. 
+%Trunk movements were completed in entirety prior to speech onset, providing an utterance-initial visual cue.
+%Adaptor gestures were completed during the presentation of speech, creating an utterance-medial cue.
+%The different postures provided a more `global' cue ?? %JK reword..
+
+
 \subsection{Materials}
 Visual stimuli consisted of the same 120 line drawings from \citet{Snodgrass1980} which were used in \citet{Loy2017}, presented in pairs across sixty trials. 
 In each trial, the speaker named one object (referent) as that which concealed the treasure; the other object is hereafter named the distractor.
@@ -123,7 +130,7 @@ In order to make the stimuli look as natural as possible, a variable video-to-sp
 For trunk movements, the frame at which the movement ended was identified and used as the point of utterance onset (Mean onset = 1430ms, SD = 440ms).
 This allowed the duration of the trunk movement to be interpretable as speech initiation time, which could in turn potentially be associated with the speaker preparing a dishonest utterance.
 To control for any sensitivity to the duration of pre-utterance video, these durations were matched in the no-cue videos.
-For adaptor gestures, the movements were allowed to overlap with speech in order to make the audio and video more believable, with the duration of overlap determined individually for each video (Mean = 1370ms, SD = 410ms).
+For adaptor gestures, the movements overlapped with speech, with the duration of overlap determined individually for each video (Mean = 1370ms, SD = 410ms).
 These durations were matched in the videos that presented the speaker sitting in a different posture.
 
 As with \citep{Loy2017}, 20 critical referents were counterbalanced across two lists, each containing 10 cue and 10 no-cue videos.
@@ -180,7 +187,7 @@ Data from four participants who indicated suspicion of the proposed origins of t
 Analysis was carried out in R version~3.4.4 \citep{Rbase2017}, using the lme4 package \citep{Bates2015}. 
 Trials in which participants did not click on either the referent or distractor (0.003\% of trials) were excluded from all analyses. 
 
-Object clicked (referent or distractor) was modeled using mixed effects logistic regression, with fixed effects of cue type (No Cue, Different Postures, Trunk Movements, Adaptor Gestures) and video-to-speech duration (Z-scored), thus controlling for any possible effect of perceived speech latency on judgments of dishonesty.
+Object clicked (referent or distractor) was modeled using mixed effects logistic regression, with fixed effects of cue type (No-Cue, Different Postures, Trunk Movements, Adaptor Gestures) and video-to-speech duration (Z-scored), thus controlling for any possible effect of perceived speech latency on judgments of dishonesty.
 Random intercepts and slopes for cue type and video-to-speech were included by-participant, along with random intercepts by-referent.
 Reaction times (measured from referent onset) were modelled with the same fixed and random effect structure.
 Following \citet{Lo2015}, we compared mixed effects logistic regression models which specified an identity link function, assuming gaussian, gamma and inverse gaussian distributions.
@@ -224,7 +231,7 @@ Neither cue type nor duration of video prior to speech was associated with a sig
 \label{table:v1_clicks}
 \begin{tabularx}{\linewidth}{YYYYY}
 \hline
-& No Cue & Different Posture & Trunk Movement & Adaptor Gesture \\
+& No-Cue & Different Posture & Trunk Movement & Adaptor Gesture \\
 Clicks to Referent & 63.8\% & 48.0\% & 49.7\% & 41.5\%  \\ 
 Clicks to Distractor & 36.2\% & 52.0\% & 50.3\% & 58.5\% \\
 \hline
@@ -275,33 +282,34 @@ As with the eye-movements, different postures and adaptor gestures resulted in a
 
 \section{Discussion}
 Experiment 1 investigated how the pragmatic inferences listeners make about a speaker's honesty are influenced by the presence of different types of movements and postures. 
-As in previous studies using this paradigm \citep{Loy2017, King2018}, participants showed a tendency to interpret an utterance as truthful when it had been presented without any potential cue to deceit.
-Utterances presented alongside any movement or different posture weakened this tendency, but only the presence of adaptor gesturing resulted in significantly more judgments of deception than truthfulness (indicated by more clicks to the distractor over the referent).
+As in previous studies using this paradigm (minus the video component) \citep{Loy2017, King2018}, participants showed a tendency to interpret an utterance as truthful when it had been presented without any potential cue to deceit.
+Utterances presented alongside any cue --- both movement and different postures --- weakened this tendency, but only the presence of adaptor gesturing resulted in significantly more judgments of deception than truthfulness (indicated by more clicks to the distractor over the referent).
 
 The influence of the visual channel was also evident in participants' early stages of utterance processing. 
-Across videos both with and without a cue, participants showed an initial tendency to fixate and move the mouse toward the referent over distractor; however, videos of different postures and adaptor gestures resulted in a reduction of this tendency.
-Interestingly, this early effect was not found for videos of trunk movements.
+Across videos both with and without a cue, participants showed an initial tendency to fixate and move the mouse toward the referent over distractor; however, videos of different postures and adaptor gestures weakened this bias towards the referent.
+Interestingly, this was not the case for videos of the speaker producing a trunk movement.
 One possible explanation for this could be due to the fact that in all videos of trunk movements, the speaker completed the movement prior to the onset of speech.
-This meant that at the point of referent onset, the audiovisual information immediately available to the listener was comparable to the no cue videos. 
+This meant that at the point of referent onset, the audiovisual information immediately available to the listener was comparable to the no-cue videos. 
+The same can be said, however, of the utterance-initial disfluent stimuli which resulted in judgments of deception in \citet{Loy2017}.
 
 Although eye-movements early-on after referent-onset were influenced by the presence of visual cues, the point at which listeners' preference toward the referent tended to be matched (or overtaken, in the case of adaptor gestures) by a preference for the distractor appeared at approximately 1000~ms post-referent onset. 
 This contasts with previous studies using the `treasure-game' paradigm (minus the video): Participants in \citet{Loy2017} showed little to no initial referent-bias following a disfluent utterance, with a distractor-bias appearing approximately 600~ms post-referent onset following both utterance-initial and utterance-medial disfluencies. 
+Despite this, the initial bias towards the referent appeared at approximately 300~ms post-referent onset in all conditions --- a point comparable to previous studies with this paradigm (\citealt{Loy2017, King2018}) --- suggesting that this is not simply a result of the video detracting from participants' fixations to the objects.
 
-This could simply be a result of the inclusion of videos in the experimental stimuli detracting from participants' fixations to the two objects.
-This would also explain the differences in the early window (0 to 1100~ms) between the types of cue: The reduction in the referent-bias may be a result of the video being more salient in both the different posture and the adaptor gesture conditions, and not evidence of am emerging bias towards interpreting the utterances as dishonest. 
-That said, however, the initial referent-bias appears at approximately 300~ms post-referent onset in all conditions --- a point comparable to previous studies with this paradigm (\citealt{Loy2017, King2018}).
+The results from Experiment 1 support previous findings in the deception literature that listeners' judgments of deception are influenced by visual information about the speaker during the production of the utterance in question.
+The fact that static videos of the speaker in different postures also influenced these judgments suggests that listeners were not simply responding to a rule-of-thumb association between increased movement and deception. 
+Although visual cues were found to influence the early stages of comprehension, it is unclear whether this should be attributed to evidence of emerging judgments of deception, or merely to differences in visual saliency between experimental stimuli.
+Furthermore, judgments of deception took substantially longer to unfold than in previous studies using the same paradigm (minus the video component), suggesting that listeners might be drawing links between visual cues and dishonesty via a more cognitively demanding method than a straightforward heuristic.
 
-The results from Experiment 1 support previous findings in the deception literature that listeners' judgments of deception are influenced by both a speakers' movements and their postures.
-The fact that static postures also influenced these judgments suggests that listeners were not simply responding to a rule-of-thumb association between increased movement and deception. 
-However, while visual cues were found to influence the early stages comprehension, it took substantially longer than for the judgment of deception to unfold than in previous studies using the same paradigm (minus the video component).
-
-Experiment 2, a simplified version of the experiment in which we focused on one type of cue --- adaptor gesturing.
-Additionally, we included a task after the eye-tracking segment asking participants to rate each video for how nervous they perceived the speaker to be. 
+In an attempt to clarify the time-course of visual cue-based deception judgments, we conducted a simplified version of the experiment, in which we focused on visual cues which elicited the most judgments of deception in experiment 1 --- adaptor gestures.
+Removing the variety in visual information presented to participants makes reliance upon a rule-of-thumb assocation between movement and dishonesty a more feasible strategy.
+Additionally, to explore whether participants were linking visual cues to dishonesty via perceptions of nervousness, experiment 2 included a task after the eye-tracking segment asking participants to rate each video for how nervous they perceived the speaker to be. 
 
 \section{Experiment 2}
 Experiment 2 focused on the influence of adaptor gestures on judgments of dishonesty, and looked at whether these judgments paralleled with perceptions of nervousness in the speaker.
 We focused on adaptor gestures since these were found to have the largest effect on listeners' judgments of dishonesty in Experiment 1. 
 If adaptor gestures are linked to deception via perceived nervousness, then gestures which are rated as more nervous should result in more judgements of dishonesty. 
+
 Using the same paradigm as Experiment 1, participants in Experiment 2 heard utterances accompanied by a video of a speaker either producing an adaptor gesture or sitting motionless, and were tasked with making an implicit judgement on whether the speaker was lying or telling the truth. 
 After the task, participants were asked to rate each video (without audio) on how nervous the speaker looked.
 This provided us with a measure of association between the speaker's body language and their perceived nervousness.
@@ -312,17 +320,15 @@ As in Experiment 1, these images were displayed in referent-distractor pairs, wi
 Following \citet{Loy2017}, we used the same set of referents and distractors which had been matched for both ease of naming and familiarity.
 
 
-%%%%%%%%%%%%%%%%%JK HERE
-
 As in Experiment 1, each pair of images and recorded utterance was presented alongside a video clip of a person purported to be the speaker of the utterance.
-Twenty video clips (10 adaptors; 10 no-gesture) were used. 
-Based on participant feedback from Experiment 1, care was taken to ensure that the No Gesture videos presented the speaker in a relaxed posture. 
+Twenty video clips (10 adaptor gestures; 10 no-cue) were used. 
+Based on participant feedback from Experiment 1 (in which several participants mentioned basing judgments on how relaxed the speaker's posture appeared to be), care was taken to ensure that the no-cue videos presented the speaker in a relaxed posture. 
 Adaptor gestures were based on descriptions of anxious non-verbal behaviour from \citet{Gregersen2005}.
-Videos were chosen from a pre-test which asked participants to rate 28 silent videos (18 different adaptor gestures; 10 no-gestures) for their perceived nervousness of the speaker. 
+Videos were chosen from a pre-test which asked participants to rate 28 silent videos (18 different adaptor gestures; 10 no-cue) for their perceived nervousness of the speaker. 
 10 native english speakers were told that they were going to watch videos (without audio) of someone being questioned in a stressful situation, and were asked to rate how nervous the speaker looked in each video (1: very relaxed, 7: very nervous). 
-The 10 adaptor gestures with the highest ratings (Mean = 4.1, SD = 1.5) were included in the experiment, along with the 10 no-gesture videos (Mean = 1.9, SD = 1.1).
+The 10 adaptor gestures with the highest ratings (Mean = 4.1, SD = 1.5) were included in the experiment, along with the 10 no-cue videos (Mean = 1.9, SD = 1.1).
 
-The 20 referents were counterbalanced across two lists such that each referent that occurred with a gesture video in the first list occurred with a no-gesture in the second.
+The 20 referents were counterbalanced across two lists such that each referent that occurred with a gesture video in the first list occurred with a no-cue video in the second.
 The pairings of referents with specific videos/gestures within each condition was randomised on each run of the experiment.
 
 \subsection{Procedure}
@@ -339,30 +345,30 @@ Twenty-three native English speaking participants took part in exchange for \pou
 Data from three participants were excluded due to suspicion of the audiovisual stimuli being scripted (based on the post-test questionnaire and questioning during debrief), hence the final dataset included data from 20 participants.
 
 \subsection{Analysis}
-We followed the same analysis strategy as was used for Experiment 1, with the experimental manipulation of gesture being a dichotomous Gesture vs.\@ No Gesture.
+We followed the same analysis strategy as was used for Experiment 1, with the experimental manipulation of cue presence being a dichotomous Cue vs.\@ No Cue.
 Trials which did not result in a click to either object (0.8\%) were excluded from analyses.
 
 Analyses of object clicks and reaction times did not control for video-to-speech duration, since this was controlled in the experimental design.
-To investigate whether listeners' deception judgments were predicted by their subsequent ratings of perceived nervousness, analysis of object clicks included participants' post-test ratings (Z scored) of each video as a fixed effect, along with the interaction with gesture.
+To investigate whether listeners' deception judgments were predicted by their subsequent ratings of perceived nervousness, analysis of object clicks included participants' post-test ratings (Z scored) of each video as a fixed effect, along with its interaction with presence of cue.
 
 The time window of analysis for eye- and mouse- movements was reduced to the 800~ms following referent onset, based on the fact that the subset of referents included in this experiment had a maximum duration of 776~ms. 
 For the mouse movement analysis, movements beyond the outer edge of either object were excluded from analyses (1\% of samples).
-Because Experiment 2 fully counterbalanced gesture across all referents, random effects of gesture and time and their interaction were included both by-referent and by-participant.
+Because Experiment 2 fully counterbalanced cue presence across all referents, random effects of cue presence and time and their interaction were included both by-referent and by-participant.
 
 \subsection{Object clicks}
 Across the experiment, participants clicked on the referent in 53\% of trials and the distractor in 47\%.
-Table \ref{table:v2_clicks} shows the proportions of clicks to either object following videos displaying either an adaptor gesture or no gesture.
-As in Experiment 1, participants showed a bias toward a final interpretation of the utterances without gestures as truthful, with more clicks to the referent than the distractor \resultsLog{1.15}{0.37}{<0.005}.
-Patterning with the adaptor gestures in Experiment 1, utterances presented with an adaptor gesture here resulted in bias towards participants clicking the distractor (\resultsLog{-2.45}{0.51}{<0.001}).
+Table \ref{table:v2_clicks} shows the proportions of clicks to either object following videos displaying either a cue (adaptor gesture) or no cue.
+As in Experiment 1, participants showed a bias toward a final interpretation of the utterances without visual cues as truthful, with more clicks to the referent than the distractor \resultsLog{1.15}{0.37}{<0.005}.
+Patterning with the adaptor gestures used in Experiment 1, utterances presented with an adaptor gesture here resulted in bias towards participants clicking the distractor (\resultsLog{-2.45}{0.51}{<0.001}).
 Inclusion of participants post-test ratings of how nervous they perceived the speaker to be in each video did not improve model fit (${\chi}^2$=0.46)
-There was no effect of gesture on time to click.
+There was no effect of cue presence on time to click.
 
 \begin{table}
-\caption{Breakdown of mouse clicks recorded on each object (referent or distractor) by presence of gesture for Experiment 2}
+\caption{Breakdown of mouse clicks recorded on each object (referent or distractor) by presence of cue for Experiment 2}
 \label{table:v2_clicks}
 \begin{tabularx}{\linewidth}{YYY}
 \hline
-& No Gesture & Gesture \\
+& No Cue & Cue (adaptor gesture) \\
 Clicks to Referent & 80.9\% & 24.2\%  \\
 Clicks to Distractor & 19.1\% & 75.8\%  \\
 \hline
@@ -371,9 +377,9 @@ Clicks to Distractor & 19.1\% & 75.8\%  \\
 
 
 \subsection{Eye movements}
-Figure \ref{fig:v2_eye} shows the time-course of fixations to referents and distractors over 2000~ms from referent onset, split by presence of gesture.
+Figure \ref{fig:v2_eye} shows the time-course of fixations to referents and distractors over 2000~ms from referent onset, split by presence of cue.
 Analyses conducted over the period from referent onset to 800~ms post-onset patterned with results from Experiment 1: 
-When presented with an utterance unaccompanied by a gesture, participants displayed a fixation bias towards the referent which increased over time (\resultsLM{3.03}{0.77}{>2}).
+When presented with an utterance unaccompanied by a visual cue, participants displayed a fixation bias towards the referent which increased over time (\resultsLM{3.03}{0.77}{>2}).
 When presented with an utterance accompanied by an adaptor gesture, this bias was greatly reduced (\resultsLM{-3.00}{1.02}{>2}).
 
 \begin{figure}[Ht]
@@ -383,15 +389,16 @@ When presented with an utterance accompanied by an adaptor gesture, this bias wa
   \label{fig:v2_eye}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%JK HERE
 
 
 \subsection{Mouse movements}
-Figure \ref{fig:v2_mouse} shows the time-course of the proportions of cumulative distance the mouse moved towards the referent and distractor for 2000~ms from referent onset, split by presence of gesture.
+Figure \ref{fig:v2_mouse} shows the time-course of the proportions of cumulative distance the mouse moved towards the referent and distractor for 2000~ms from referent onset, split by presence of cue.
 Analysis on the period from 0 to 800~ms post-referent onset patterned with the eye-tracking data:
-Following no gesture videos, participants showed a tendency to move the mouse increasingly towards referent over this period (\resultsLM{1.90}{0.39}{>2}).
+Following no-cue videos, participants showed a tendency to move the mouse increasingly towards referent over this period (\resultsLM{1.90}{0.39}{>2}).
 As with eye-movements, this referent-bias was greatly reduced following an adaptor gesture (\resultsLM{-2.46}{0.77}{>2})
 
-\begin{figure}[Ht]
+\begin{figure}[Ht]gesture
   \centering
 	\includegraphics[width=\linewidth]{./img/e8_mouset.pdf}
   \caption{Mouse-tracking results for Experiment 2: Proportion of cumulative distance traveled toward each object from 0 to 2000 ms post-referent onset. Proportions were calculated from the total cumulative distance participants moved the mouse until that time bin (from speech-onset, when cursor was made visible). Shaded areas represent $\pm$ 1 standard error of the mean.}
@@ -401,21 +408,21 @@ As with eye-movements, this referent-bias was greatly reduced following an adapt
 \section{General discussion}
 Across both experiments, participants showed a slight overall tendency to interpret an utterance as honest rather than dishonest, although this only differed from chance in Experiment 1. 
 This bias is in line with results from previous research on deception, which shows that listeners have a general tendency to judge a speaker as truthful (\citealt{Vrij2000}). 
-Our results show that the body language and gestures which accompany a spoken utterance affects the judgments which listeners make about the utterance's veracity.
 Utterances presented with the speaker in a neutral posture and not gesturing bias listeners towards believing the speaker to be truthful, as shown by increased tendency to fixate on, and move the mouse towards, the object which was named by the speaker. 
 This result parallels the finding in \citet{Loy2017} where fluent (as opposed to disfluent) utterances saw a bias to infer the speaker to be truthful, and suggests that listeners may have an implicit honesty-bias when faced with no obvious potential cue to deception. 
 
-Consistent with previous research in deception judgments and beliefs about cues to deception, both experiments found that participants an increase in movement with dishonesty \citep{Zuckerman1981}. 
-The speed with which judgments were influenced by movement in Experiment 2 suggests that visual information can modulate listeners' judgments about a speaker's intentions concurrently with the integration of lexical information.
-However, in both experiments, the bias towards the distractor --- signifying perceived dishonesty --- over the referent appeared approximately 1000~ms after the referent began, at a later point than previous versions of this paradigm in which speech disfluencies were found to modulate judgments of deception. 
+Our results support the theory that the body language and movements which accompany a spoken utterance influences the judgments listeners make about the utterance's veracity.
+Consistent with previous research on beliefs about and judgments based on visual cues to deception, both experiments found that participants associated an increase in movement with dishonesty \citep{Zuckerman1981}. 
+Evidence for the influence of these cues was found to occur at the early stages of reference comprehension, with Experiment 2 finding that the initial bias towards the named-object over the distractor-object was completely attenuated when presented with an adaptor gesture. 
+This suggests that visual information about the visual delivery of an utterance, just like spoken delivery, can modulate listeners' judgments about a speaker's intentions concurrently with the integration of lexical information.
 
-This, along with the fact that static videos of a speaker in different postures also influenced participants deception judgments, contrasts to a view of listeners relying on rule-of-thumb associations between visual cues and deception.
-Interestingly, participant's subsequent ratings of how nervous the speaker looked in each video did not pattern with their final judgments beyond whether or not the video presented a gesture, suggesting that the associations between adaptor gestures and lying is not a consequence of perceived anxiety in the speaker.
+Interestingly, in both experiments, the bias towards the distractor --- signifying perceived dishonesty --- over the referent appeared approximately 1000~ms after the referent began, at a later point than previous versions of this paradigm in which speech disfluencies were found to modulate judgments of deception. 
+This, along with the fact that static videos of a speaker in different postures also influenced participants deception judgments in experiment 1, contrasts to a view of listeners relying on rule-of-thumb associations between visual cues and deception.
+Our attempts to explore whether these associations are established via perceived nervousness of the speaker were inconclusive: Participant's ratings of how nervous the speaker looked in each video did not pattern with their final judgments beyond whether or not the video presented a cue, suggesting that the associations between adaptor gestures and lying patterns with, but is not necessarily a consequence of perceived anxiety in the speaker.
 
 Our results show that the integration of the visual channel can have a rapid and direct effect on pragmatic judgements, supporting the idea that communication is fundamentally multimodal: Speech and gesture interactively codetermine meaning.
-However, the integration of these cues to inform deception judgments might be more gradual than the integration of spoken cues.
-To better understand how cues to deception in different modalities affect comprehension, further research would require investigating the effect of disfluency when the visual channel is also available --- for example, studying the time course of deception judgments when faced with one or both of a disfluency and an adaptor gesture. %i.e. GVD 
-
+However, the integration of visual cues to inform deception judgments appears to be more gradual than the integration of spoken cues.
+To better understand how cues to deception in different modalities affect comprehension, further research would require investigating the effect of spoken delivery when the visual channel is also available --- for example, studying the time course of deception judgments when faced with one or both of a disfluency and an adaptor gesture. %i.e. GVD 
 
 \bibliography{./GCD}
 
