@@ -1,0 +1,24 @@
+% extra stuff to get out numbered sentence examples
+\typeout{** Linguistic examples 1.04, Martin Corley 92-95 **}
+
+%% as used for thesis \newcounter{exampl}[chapter]
+\newcounter{exampl}
+\newcounter{multi}[exampl]
+\def\themulti{\theexampl\alph{multi}}
+\def\@exstp{\setlength{\labelsep}{1 em}%
+\setlength{\labelwidth}{4em}%
+\setlength{\leftmargin}{5 em}%
+\setlength{\rightmargin}{2 em}}
+
+\newenvironment{examples}%
+{\refstepcounter{exampl}\begin{list}%
+{(\themulti)}{\@exstp\usecounter{multi}}}%
+{\end{list}}
+
+\newcommand{\example}[1]%
+{\refstepcounter{exampl}\begin{list}{(\arabic{exampl})}{\@exstp}%
+\item #1\end{list}}
+
+% bad linguistic examples
+\newcommand{\bad}[1][*]%
+{\makebox[0cm][r]{\textbf{#1\,}}\ignorespaces}
