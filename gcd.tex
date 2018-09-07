@@ -17,6 +17,11 @@
 \newcommand{\resultsLog}[3]{$\beta = #1$, $\textnormal{SE} = #2$, $p #3$}
 \newcommand{\resultsLM}[3]{$\beta = #1$, $\textnormal{SE} = #2$, $t #3$}
 
+\usepackage[obeyFinal,textsize=tiny,backgroundcolor=yellow!60]{todonotes} % to get rid of all notes, pass
+% `final' to the document class
+\setlength{\marginparwidth}{2cm}
+
+
 \title{Such gesture, very lie, wow}
 \author{reorder(MC,JK,JL)}
 \affiliation{Psychology, PPLS, University of Edinburgh}
@@ -31,7 +36,7 @@ Edinburgh EH8~9JZ, UK\\[1ex]
 
 \abstract{
 Previous research suggests that, when questioning the veracity of an utterance, we perceive certain non-linguistic behaviours to indicate that a speaker is being deceptive.
-Recently, work has highlighted how listeners' associations between speech disfluency and dishonesty happen at the earliest stages of reference comprehension, suggesting that contextual information about the manner of spoken delivery influences pragmatic judgements simultaneously with the processing of lexical information.
+Recently, work has highlighted how listeners' associations between speech disfluency and dishonesty happen at the earliest stages of reference comprehension, suggesting that the manner of spoken delivery influences pragmatic judgements concurrently with the processing of lexical information.
 The studies presented here investigate the integration of visual information about a speaker into judgements of deception.
 By studying the time-course of judgements of a speaker's (dis)honesty when presented with different visual cues to deception, we ask whether listeners are relying upon a rule-of-thumb association between visual cues and deception, or whether the link between gestures and perceived deception requires a more complex inferential process.
 Participants saw and heard a video of a potentially dishonest speaker describe treasure being hidden behind a named object, while also viewing both the named object and a distractor object. 
@@ -39,7 +44,7 @@ Their task was to click on the object behind which they believed the treasure to
 Eye- and mouse-movements were recorded. 
 Experiment 1 investigates the time-course of listeners' associations between visual cues and deception, using a variety of static and dynamic cues.
 Experiment 2 focuses on a dishonesty-bias for adaptor (fidgetting) gestures, and asks whether listeners' judgements of deception correlate with how nervous they think the speaker appears in each video.
-Results show that the visual modality can have a rapid and direct influence on pragmatic judgements, supporting the idea that communication is fundamentally multimodal, and should be studied as such.
+Results show that the visual modality can have a rapid and direct influence on pragmatic judgements, supporting the idea that communication is fundamentally multimodal.
 Although the nonverbal delivery of an utterance is found to influence the early stages of reference comprehension, establishing deception-judgements based on visual cues appears to be more gradual than previous studies have suggested it is for spoken cues.
 }
 
@@ -55,39 +60,49 @@ Although the nonverbal delivery of an utterance is found to influence the early 
 %intro (%JK too long?)
 That people deceive one another is an inescapable aspect of everyday communication.
 After studying participants' social interactions over a one week period, \citet{DePaulo1996} concluded that people lie on average twice a day.
-The idea that it is possible to detect deceit --- that there are systematic differences in people's behaviour depending on whether they are telling a truth or a lie --- has long captivated human interest in a variety of areas, from criminal interrogations to the business world.\footnote{Where, in some cases, ``how to lie'' is equally as important. See https://www.marketplace.org/2008/02/18/busness/lying-essential-doing-business}
+The idea that it is possible to detect deceit---that there are systematic differences in people's behaviour depending on whether they are telling the truth or a lying---has long captivated human interest in a variety of areas, from criminal interrogations to the business world.\footnote{Where, in some cases, ``how to lie'' is equally as important. See \url{https://www.marketplace.org/2008/02/18/busness/lying-essential-doing-business}.}
 Much research has investigated the behaviours that listeners associate with lying, covering a wide range of multi-modal phenomena from speech disfluencies and vocal pitch to visual cues such as postural shifts and hand movements.
-Few studies, however, have studied the time-course of inferences to deception, and fewer still have done so in a multi-modal setting.
+Few studies, however, have studied the time-course of inferences of deception, and fewer still have done so in a multi-modal setting.
 The present experiments investigate listeners' associations of a speaker's nonverbal behaviour with the veracity of an utterance, studying how and when visual information about a speaker is integrated into pragmatic interpretations of speech.
 
 %could actually start here?
-In most natural communication, speakers can convey information via multiple channels.
-Along with spoken delivery, a speaker's gestures, postures and facial expressions all offer information which can have a bearing on the non-literal---or pragmatic---interpretation of a message, for instance conveying emotion \citep{Busso2004, Gregersen2005}.
-One such pragmatic interpretation of a spoken utterance is the judgement of a statement's veracity.
+In natural communication, speakers can convey information via multiple channels.
+Along with spoken delivery, a speaker's gestures, postures and facial expressions all offer information which can have a bearing on the non-literal (or pragmatic) interpretation of a message, for instance conveying emotion \citep{Busso2004, Gregersen2005}.
+One such pragmatic interpretation is the judgement of a statement's veracity.
 Research suggests that there are many aspects of nonverbal delivery which we, as listeners, believe to be \term{cues-to-deception}. 
-In an analysis of 33 studies, \citet{Zuckerman1981} found that nine out of the ten visual cues-to-deception that were included in the analysis were believed to be indicative of deceit. 
-In a further subset of 13 studies reporting relationships between cues and subsequent deception judgements (rather than explicit beliefs about cues), three (smiling, gaze, and postural shifts) of the four available visual cues were associated with perceived dishonesty.
+In an analysis of 33~studies, \citet{Zuckerman1981} found that nine out of the ten visual cues-to-deception that were investigated were believed to be indicative of deceit. 
+In a further subset of 13~studies reporting relationships between cues and subsequent deception judgements (rather than explicit beliefs about cues), three (smiling, gaze, and postural shifts) of the four available visual cues were associated with perceived dishonesty.
 
-Interestingly, listeners appear to hold these associations and beliefs despite the reliability of cues as actual signals of deception being inconclusive: \citet{Zuckerman1981} found only two visual cues (shrugs and fidgetting) to be associated with actual deceit, and a  more recent meta-analyses found little evidence of a relationship between lying and almost all forms of movement \citep{DePaulo2003}.
-. %% Jia: another meta-analysis to cite here is Hartwig (2011) about cues to actual deception being weak (https://www.researchgate.net/profile/Maria_Hartwig/publication/51251661_Why_Do_Lie-Catchers_Fail_A_Lens_Model_Meta-Analysis_of_Human_Lie_Judgments/links/02bfe5109718134014000000/Why-Do-Lie-Catchers-Fail-A-Lens-Model-Meta-Analysis-of-Human-Lie-Judgments.pdf) - courtesy of the reviewer 2 who thinks my dialogue study is crap and implies that we should rely more on meta-analyses rather than individual studies...
-Furthermore, some studies have found deception to be inversely related to the cues we think of as deceitful: lying has been linked with a \emph{decrease} in hand, arm, and leg movements \citep[e.g.][]{DePaulo1992, Ekman1989, Vrij1995}, as well as a reduction in illustrative gesturing \citep[e.g.][]{DePaulo2003, Cohen2010}.
-Even speakers' post-hoc perceptions of their own gestures when lying have been found to be at odds with how they actually behaved:
-\citet{Vrij1996} found that after partaking in two interviews --- one in which they were truthful, the other dishonest --- participants believed that their movements increased when lying, even though a decrease actually occurred.
+Interestingly, listeners appear to make these associations independent of the reliability of cues as actual signals of deception: \citet{Zuckerman1981} found only two visual cues (shrugs and fidgetting) to be associated with actual deceit, and a  more recent meta-analysis found little evidence of a relationship between lying and almost any form of movement \citep{DePaulo2003}.\todo{see Jia comment in source}
+%% Jia: another meta-analysis to cite here is Hartwig (2011) about cues to actual deception being weak (https://www.researchgate.net/profile/Maria_Hartwig/publication/51251661_Why_Do_Lie-Catchers_Fail_A_Lens_Model_Meta-Analysis_of_Human_Lie_Judgments/links/02bfe5109718134014000000/Why-Do-Lie-Catchers-Fail-A-Lens-Model-Meta-Analysis-of-Human-Lie-Judgments.pdf) - courtesy of the reviewer 2 who thinks my dialogue study is crap and implies that we should rely more on meta-analyses rather than individual studies...
+Some studies have in fact found deception to be inversely related to the cues we think of as deceitful:
+Lying has been linked with a \emph{decrease} in hand, arm, and leg movements \citep[e.g.][]{DePaulo1992, Ekman1989, Vrij1995}, as well as a reduction in illustrative gesturing \citep[e.g.][]{DePaulo2003, Cohen2010}.
+Even speakers' post-hoc perceptions of their own gestures when lying have been found to be at odds with how they actually behave:
+\citet{Vrij1996} found that after partaking in interviews in which they were in turn truthful and dishonest, \todo{try not to overuse em-dashes}participants believed that their movements increased when lying, even though a decrease actually occurred.
 %(whether or not participants were informed before-hand that deception is usually associated with a decrease in movements had no effect).
 
-We tend to hold misguided judgements about which behaviours really co-occur with deception (see \citet{Vrij2000}), suggesting that the links which listeners' draw between visual information and deception are likely not a result of learning these associations from experience.
-What is more, this is reinforced by the fact that in everyday communication, there are few occurrences where listeners are given immediate feedback on the honesty of a given utterance.
-Why then do listeners' hold such strong associations and beliefs between visual cues and lying?
-One suggestion is that this association is based on a set of cues which listeners consistently associate with deception via a rule-of-thumb based heuristic \citep{DePaulo1982}.
-This set of cues may be predicated on lay beliefs about deception, or on introspection as a speaker rather than experience as a listener, but ultimately leads to the somewhat innaccurate model of what deceitful behaviour looks and sounds like. 
+%% MC: just said that in the previous paragraph!
+% We tend to hold misguided judgements about which behaviours really co-occur with deception (see \citet{Vrij2000})
+\todo{see source}Given that listeners' intuitions about deceitful behaviour are poor, the associations they make between visual information and deception are unlikely to have been learnt.
+This is reinforced by the fact that in everyday communication, there are few occurrences where listeners are given immediate feedback on the honesty of a given utterance.
+%
+Why then do listeners hold such strong associations and beliefs between visual cues and lying?\todo{something went wrong with this sentence.  And are the beliefs `strong'?}
+%
+One suggestion is that these associations are based on a set of cues which listeners heuristically associate with deception \citep{DePaulo1982}.
+% a rule-of-thumb based heuristic \citep{DePaulo1982}. (tautology!)
+% not "the set of cues"
+The heuristics may be predicated on lay beliefs about deception, or on introspection as a speaker rather than experience as a listener, but ultimately lead to the somewhat innaccurate model of what deceitful behaviour looks and sounds like. \todo{needs fleshed out a bit?}
 
-Recent research by \citet{Loy2017} investigating the time-course of the association between lying and speech disfluency supports the idea that listeners might rely on such a rule-of-thumb based approach when judging deception based on spoken delivery.
-\citet{Loy2017} used a visual world paradigm in which participants were presented with two objects along with utterances describing the location of some treasure purportedly hidden behind one of the objects.
+\citet{Loy2017} investigated the association between lying and speech disfluency, and found support for the idea that listeners rely on a rule-of-thumb-based approach when judging the veracity of an utterance based on the way in which it is spoken.
+\citeauthor{Loy2017} used a visual world eye- and mousetracking paradigm in which participants were presented with images of two objects, and heard utterances describing the location of some treasure purportedly hidden behind one of the objects.
 These utterances were presented as having been elicited in a previous experiment, in which the speaker was said to have been lying some of the time.
 Crucially, \citet{Loy2017} manipulated the manner of spoken delivery, with half of the experimental items containing a speech disfluency.
-Participants were tasked with choosing where they \textit{believed} the treasure to really be hidden --- the object named in the utterance (indicating a judgement of honesty), or a distractor (indicating dishonesty).
-Participants were more likely to judge disfluent utterances as dishonest than fluent ones (as indicated by more clicks on the distractor on disfluent trials). 
-Importantly, \citeauthor{Loy2017}'s results showed an early bias in both eye and mouse movements towards the not-referred-to object, suggesting that speech disfluency is already incorporated into listeners' idea of deceptive speech, having an immediate effect on their interpretation of the utterance. 
+Participants were tasked with clicking on the object they \textit{believed} to be concealing the treasure, choosing either the object named in the utterance (indicating a judgement of honesty), or a distractor (indicating dishonesty).
+They were more likely to judge disfluent utterances as dishonest than fluent ones (as indicated by a greater probability of clicking on the distractor in a disfluent trial). 
+Importantly, disfluency resulted in an early bias in both eye and mouse movements towards the not-referred-to object.
+This suggests that speech disfluency is already incorporated into listeners' ideas concerning deceptive speech, and has an immediate effect on their interpretation of an utterance. 
+
+%%%%%%%%----HERE
 
 Little is known, however, about whether such rapid integration of cues to deception might extend to the visual channel of communication. 
 Adhering to a rule-of-thumb association may be feasible for spoken cues, and evidence suggests that some effects of speech interruptions on comprehension do not discern between a spoken \spex{um} and an artificial tone \citep{Corley2011}.
