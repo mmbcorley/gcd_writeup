@@ -234,3 +234,6 @@ TSWLatexianTemp*
 .Rhistory
 .Rdata
 .Rproj.user
+
+# kde
+.directory
