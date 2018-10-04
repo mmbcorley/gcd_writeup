@@ -233,15 +233,14 @@ Eye- and mouse- biases were calculated from the proportions of referent to distr
 In these measures, a value of zero indicates no bias towards either object, and positive and negative values indicate a bias towards the referent and distractor respectively.
 
 As in previous studies using the treasure game paradigm \citep{King2018,Loy2017}, eye- and mouse- tracking analyses were conducted on a time-window beginning at referent onset and extending for 800~ms, just beyond the duration of the longest referent (776~ms).
-Eye and mouse data was modelled over this time window using linear mixed effects models, with fixed effects of time from referent onset (seconds), visual cue (deviation coded), and their interaction.
+Eye and mouse data was modelled over this time window using linear mixed effects models, with fixed effects of time from referent onset (seconds), visual cue (dummy coded with no cue as reference level), and their interaction.
 Random intercepts and slopes for time and visual cue were included both by-item and by-participant, with the addition of a by-participant interaction between time and visual cue.
 Following \citet{Baayen2008}, we considered effects in these models to be significant where $|t|>2$.
 
 \subsection{Object clicks}
-Across the experiment, participants clicked on the referent in 56\% of critical trials and the distractor in 44\%.
-Table \ref{table:v1_clicks} shows the percentage of clicks across all participants to either object following videos showing different types of cue.
-
-Analysis of critical trials indicated that visual information about the speaker had marginal effects on participants' decisions to click on either object, with videos showing no cue resulting in marginally more clicks on the referent (\resultsLog{0.56}{0.32}{=0.08}).
+Participants clicked on the referent in 56\% of critical trials and the distractor in 44\%.
+Table \ref{table:v1_clicks} shows the percentage of clicks across all participants to either object in each condition.
+participants were marginally less likely to click on the referent following videos showing a trunk movement than following videos showing no cue (\resultsLog{-0.56}{0.32}{=0.08}).
 There was no effect of visual cue on the time taken by participants to click on an object.
 
 \begin{table}
@@ -258,8 +257,15 @@ Clicks to Distractor & 75 (37.5\%) & 100 (50.3\%) \\
 
 \subsection{Eye movements}
 Figure \ref{fig:v1_eye1} shows the time course of fixations to referents and distractors in critical trials for the 2000~ms from referent onset, split by whether the video showed either no cue or a trunk movement.
-Analysis of critical trials conducted over the 800~ms period from referent onset showed a main effect of time (\resultsLM{2.40}{0.69}{=3.65}) indicating that participants tended to fixate on the referent over the distractor more as time from referent onset increased.
-There were no main effects of visual cue, nor any interaction of visual cue with time, indicating that participants tendency to fixate upon the referent was not influenced by whether the video showed the speaker producing a trunk movement or sitting motionless.
+Analysis conducted over the 800~ms period from referent onset showed a main effect of time (\resultsLM{2.40}{0.69}{=3.65}), indicating that as this time window went on, participants became increasingly likely to fixate the referent over the distractor.
+Importantly, there was no interaction of visual cue with time, suggesting that participants' increasing tendency to fixate the referent was not influenced by whether the video showed the speaker producing a trunk movement or sitting motionless.
+
+                              Estimate Std. Error t value
+(Intercept)                    -0.3833     0.3877  -0.988
+vid_typeTrunk Movement         -0.1784     0.5666  -0.315
+time_s                          2.2311     0.9238   2.415
+vid_typeTrunk Movement:time_s   0.3524     1.2686   0.278
+
 
 \begin{figure}[Ht]
   \centering
@@ -271,7 +277,8 @@ There were no main effects of visual cue, nor any interaction of visual cue with
 \subsection{Mouse movements}
 Figure \ref{fig:v1_mouse1} shows the time course of the proportions of cumulative distance the mouse moved towards the referent and distractor in critical trials for 2000~ms from referent onset, split by whether the video showed either no cue or a trunk movement.
 Analysis on the 800~ms following referent onset showed that participants' mouse-movements patterned with their eye-movements:
-Participants tended to move the cursor towards the referent over the distractor more as time increased (\resultsLM{0.73}{0.32}{=2.31}), and there was no main effect of visual cue nor an interaction of visual cue with time.
+Over the course of the window, participants showed an increasing likelihood of having moved more toward the referent than the distractor (as indicated by a main effect of time \resultsLM{0.73}{0.32}{=2.31}). 
+As in the analysis of eye-movements, whether videos showed trunk movements or no cue was not found to effect participants' mouse-movements over time. %JK this is the interaction. 
 
 \begin{figure}[Ht]
   \centering
@@ -280,32 +287,75 @@ Participants tended to move the cursor towards the referent over the distractor 
   \label{fig:v1_mouse1}
 \end{figure}
 
+\section{Additional Analyses of Filler trials}
+In the post-test verbal questioning, 8 (40\%) of participants specifically mentioned responding to the speaker's hand-movements in their judgements of whether or not the utterance was a lie. 
+Furthermore, analysis of the objects participants clicked in filler trials revealed that the visual cues presented in these trials had an effect on which object was subsequently clicked.
+Analysis of filler trials was conducted on 797 trials (3 trials were excluded from analysis due to no mouse click on either object)
+Mixed effects logistic regression with ??? 
+%fixed effect
+%random effects (by-item random effects of cue were not possible due to these videos not being counterbalanced across referents)
+
+Table \ref{table:v1_filler_clicks} shows the percentage of clicks in filler trials across all participants to either object following videos showing different types of cue.
+Results show that,  ----- clicks on the referent following videos showing no cue (\resultsLog{}{}{}) and fewer clicks on the referent following videos showing adaptor gestures (\resultsLog{}{}{}).
+
+
+\begin{table}
+\caption{Breakdown of mouse clicks in filler trials recorded on each object (referent or distractor) by visual cue for Experiment~1}
+\label{table:v1_filler_clicks}
+\begin{tabularx}{\linewidth}{YYYYY}
+\hline
+& No-Cue & Different Posture & Adaptor Gesture \\
+Clicks to Referent & 256 (64.5\%) & 96 (48.0\%) & 83 (41.5\%) \\ 
+Clicks to Distractor & 141 (35.5\%) & 104 (52.0\%) & 117 (58.5\%) \\
+\hline
+\end{tabularx}
+\end{table}
+
+Visual inspection of the time-course of eye-movements (see Figure \ref{fig:v1_eye2}) suggests an apparent association between adaptor gesturing and deception, with a greater proportion of fixations to the distractor than the referent emerging later on (approximately 1000~ms) following these trials.
+Similarly, the time-course of mouse-movements (see Figure \ref{fig:v1_mouse2}) appears to show the greatest attenuation of the bias towards the referent following videos of adaptor gestures.
+
+
+\begin{figure}[Ht]
+  \centering
+	\includegraphics[width=\linewidth]{./img/e7_fixations_filler.pdf}
+  \caption{Eye-tracking results for filler trials in Experiment~1: Proportion of fixations to each object (referent or distractor) and the video, from 0 to 2000 ms post-referent onset, calculated out of the total sum of fixations for each 20~ms time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
+  \label{fig:v1_eye2}
+\end{figure}
+\begin{figure}[Ht]
+  \centering
+	\includegraphics[width=\linewidth]{./img/e7_mouse_filler.pdf}
+  \caption{Mouse-tracking results for filler trials in Experiment~1: Proportion of cumulative distance traveled toward each object from 0 to 2000 ms post-referent onset. Proportions were calculated from the total cumulative distance participants moved the mouse until that time bin (from video onset, when cursor was made visible). Shaded areas represent $\pm$ 1 standard error of the mean.}
+  \label{fig:v1_mouse2}
+\end{figure}
+
+
+
+
+
+
 \section{Discussion}
 Experiment~1 investigated how the pragmatic inferences listeners make about a speaker's honesty are influenced by the presence of visual cues to deception in the form of trunk movements.
 We measured eye- and mouse- movements of participants who were presented with a task in which they made decisions about the true location of some treasure based on audio and video of a potentially deceptive speaker making a statement about the treasure's location.
 Participants were thus making implicit decisions about the honesty of each utterance.
 As in previous studies using versions of this paradigm \citep{Loy2017, King2018}, participants showed an overall tendency to interpret an utterance as truthful.
-Whether the videos which were presented alongside utterances showed the purported speaker producing a trunk movement or sitting motionless had no effect on participants' judgements of deception.
-Participants' eye- and mouse- movements during the 800~ms following referent-onset were likewise not influenced by whether the video showed a trunk movement or no cue.
-
-
-Post-hoc analysis of filler trials, however, indicated that for trials which showed a video of the speaker producing adaptor gesture, participants tended to click more on the distractor.
-Furthermore, 
-%JK bit about online effects
-
-
-Overall, these findings contrast with our prediction that trunk movements would provide the best opportunity to investigate the association between visual cues and deception-judgements.
+Whether the videos which were presented alongside utterances showed the purported speaker producing a trunk movement or sitting motionless did not influence participants' judgements of deception (as indicated by clicks on either the named object or a distractor).
+Participants' eye- and mouse- movements during the 800~ms following referent-onset were likewise not affected by whether the video showed a trunk movement or no cue.
+Post-hoc analysis of filler trials, however, suggested that other visual cues used as fillers (specifically adaptor gestures) influenced participants' decisions to click on either object.
+Furthermore, visual inspection of the time-course of eye- and mouse-movements in filler trials indicated that videos of adaptor gesturing may result in the greatest attenuation of the bias to fixate on and move towards the referent. 
+Taken together with the analysis of final judgements of deception (via objects clicked) in filler trials, we suggest that adaptor gestures, and not trunk movements, may elicit more judgements of deception. 
+Overall, this contrasts with our prediction that trunk movements would provide the best opportunity to investigate the association between visual cues and deception-judgements.
 One possible explanation for the failure of videos showing trunk movements to elicit judgements of deception could be due to the fact that at the point of referent onset, the audiovisual information immediately available to the listener was comparable to the videos showing no cue (trunk movements having ended at speech onset).
-Comparatively, despite the cues used in filler trials showing movement in a smaller area of the video (or no movement at all), their proximity in time to critical noun may explain why they, but not trunk movements, appeared to elicit judgements of deception. %JK both, or just adaptors?
+Comparatively, despite the cues used in filler trials showing movement in a smaller area of the video (or no movement at all), their proximity in time to critical noun may explain why they, but not trunk movements, appeared to elicit more judgements of deception. %JK both, or just adaptors?
 This explanation, however, is at odds with the bias towards judgements of deception following utterance-initial disfluencies observed in previous work \citep[][Experiment~1]{Loy2017}.
-We cannot at present reconcile this discrepancy, although it may point towards different visual cues having different effects on judgements of deception---something which is supported by comments from several participants in the post-test questioning that they based their judgements on \spex{how relaxed the speaker looked}.
+We cannot at present reconcile this discrepancy, although it may point towards different visual cues having different effects on judgements of deception.
+Alternatively, the strength of specific cues to deception may be dependent upon what other cues the speaker tends to produce, with judgements of veracity focussing on whichever cue is most salient for a given speaker/situation.%JK is this reasonable?
 
-Results from Experiment~1 do not support previous findings that addressees associate trunk movements with lying: When viewing a potentially deceitful speaker, the presence of a trunk movement immediately prior to speech was not found to influence addressees' judgements of (dis)honesty. 
-However, additional analyses of filler trials in which videos showed the speaker producing either an adaptor gestur or sitting in a different posture indicate that these behaviours (specifically adaptor gesturing) may be associated with perceived lying.
-Furthermore, the results of post-hoc analyses on eye- and mouse- movements in filler trials suggest that this association may be detectable at the early stages of reference comprehension. 
-From a practical viewpoint, this suggests that the visual world paradigm may be compatible with a range of video stimuli, including those in which movement co-occurs with speech: For instance, videos showing adaptor gesturing simultaneously with utterance playback did not stop a fixation bias appearing in the early stages of reference comprehension, and small movements such as finger tappings were salient enough to influence judgements of deception.
+Results from Experiment~1 do not support previous findings in the literature suggesting that addressees associate trunk movements with lying: When viewing a potentially deceitful speaker, the presence of a trunk movement immediately prior to speech was not found to influence addressees' judgements of (dis)honesty. 
+However, additional analyses of filler trials in which videos showed the speaker producing either an adaptor gesture or sitting in a different posture indicate that in particular adaptor gesturing appeared to be associated with judgements of dishonesty.
+From a practical viewpoint, the time-course of participants' eye- and mouse-movements in Experiment~1 suggest that the visual world paradigm may be compatible with a range of video stimuli: Even when viewing videos in which movements co-occurred with speech (e.g. adaptor gestures), visualisation of proportions of fixations indicate that the video did not prevent fixations on the objects in the display increasing in the early stages of reference comprehension.
+Furthermore, small movements such as finger tappings were salient enough to influence participants' final judgements of deception.
+To directly investigate whether the association between adaptor gesturing and perceived dishonesty is detectable at the early stages of reference comprehension, we conducted Experiment~2, in which participants saw videos of a speaker either producing an adaptor gesture, or sitting motionless, and there were no filler trials.
 
-To directly investigate the association between adaptor gesturing and perceived dishonesty, we conducted Experiment~2, in which participants saw videos of a speaker either producing an adaptor gesture, or sitting motionless, and there were no filler trials.
 
 \section{Experiment~2}
 Using the same paradigm as Experiment~1, participants in Experiment~2 heard utterances accompanied by a video of a speaker either producing an adaptor gesture or sitting motionless, and were tasked with making an implicit judgement on whether the speaker was lying or telling the truth.
@@ -352,8 +402,8 @@ Analyses was identical to that of the critical trials in Experiment~1.
 
 \subsection{Object clicks}
 Across the experiment, participants clicked on the referent in 53\% of trials and the distractor in the remaining 47\%.
-Table \ref{table:v2_clicks} shows the proportions of clicks to either object following videos showing either no cue or adaptor gesturing.
-The presence of adaptor gesturing was found to influence participants' decisions to click on an object, with videos presenting adaptor gesturing resulting in more clicks to the distractor \resultsLog{-2.78}{0.38}{<0.001}.
+Table \ref{table:v2_clicks} shows the proportions of clicks to either object in each condition (whether the video showed no cue or adaptor gesturing).
+Participants were less likely to click on the referent following videos showing the speaker producing an adaptor gesture than videos showing no cue \resultsLog{-2.78}{0.38}{<0.001}.
 The time participants took to click on an object was not influenced by whether the video showed an adaptor gesture or no cue.
 
 \begin{table}
@@ -370,11 +420,9 @@ Clicks to Distractor & 38 (19.1\%) & 150 (75.8\%)  \\
 
 
 \subsection{Eye movements}
-Figure \ref{fig:v2_eye} shows the time course of fixations to referents and distractors over 2000~ms from referent onset, split by whether the video showed no cue or adaptor gesturing.
-Analyses conducted over the time window of 800~ms post-referent onset revealed an interaction between time and cue (\resultsLM{-2.99}{0.71}{=-4.20})
-
-a main effect of time (\resultsLM{1.52}{0.66}{=2.30})
-There was a main effect of cue (\resultsLM{0.76}{0.31}{=2.47}) and an interaction between the cue and time, with adaptor gesturing attenuating the  (\resultsLM{-2.99}{0.71}{=-4.20})
+Figure \ref{fig:v2_eye} shows the time course of fixations to referents and distractors over 2000~ms from referent onset, split by condition.
+Analyses conducted over the time window of 800~ms post-referent onset revealed a main effect of time (\resultsLM{1.52}{0.66}{=2.30}), indicating that, as in Experiment~1, participants tended to fixate the referent over the distractor more as this window progressed.
+However, a significant interaction between time and visual cue (\resultsLM{-2.99}{0.71}{=-4.20}) indicates that the increasing referent-bias was attenuated when videos showed the speaker producing an adaptor gesture. 
 
 \begin{figure}[Ht]
   \centering
@@ -386,7 +434,8 @@ There was a main effect of cue (\resultsLM{0.76}{0.31}{=2.47}) and an interactio
 \subsection{Mouse movements}
 Figure \ref{fig:v2_mouse} shows the time course of the proportions of cumulative distance the mouse moved towards the referent and distractor for 2000~ms from referent onset, split by cue type.
 Mouse-movements over the course of the 800~ms window from referent onset again patterned with the eye-tracking data:
-Following videos showing no cue, participants showed a tendency to move the mouse increasingly towards referent over this period (\resultsLM{1.77}{0.31}{=5.72}), but this increasing referent-bias was greatly reduced following videos showing an adaptor gesture (\resultsLM{-2.16}{0.19}{=-11.40})
+As time from referent onset increase, participants showed an increasing likelihood of having moved more toward the referent than the distractor (\resultsLM{0.67}{0.29}{=2.35}), but this was weakened following videos showing an adaptor gesture (\resultsLM{-2.19}{0.64}{=-3.42})
+
 
 \begin{figure}[Ht]gesture
   \centering
@@ -395,20 +444,35 @@ Following videos showing no cue, participants showed a tendency to move the mous
   \label{fig:v2_mouse}
 \end{figure}
 
-
 \section{General discussion}
-The studies presented here investigate the integration of visual information about a speaker into judgements of deception.
-We manipulated the presentation of the different non-verbal behaviours while measuring eye- and mouse- movements of the listener towards one of two possible final judgements about the veracity of an utterance.
+
+Experiments~1 and 2 investigate the integration of visual information about a speaker into judgements of deception, focussing on addressees' associations of trunk movements and adaptor gesturing with deception respectively.
+We manipulated the presentation of different non-verbal behaviours while measuring eye- and mouse- movements of the listener towards one of two possible final judgements about the veracity of an utterance.
 In doing so, we explored the possibilities of whether listeners are relying upon a rule-of-thumb heuristic in associating visual cues to deception, or whether the link between nonverbal behaviour and perceived deception requires a more complex inferential process.
 
-In Experiment~1, listeners' final interpretations of utterance veracity were influenced by visual information about the speaker which was presented concurrently with presentation of speech.
-However, these findings were only apparent in relation to visual cues used in filler trials (in which videos showed a speaker in different postures and producing adaptor gestures), with a marginal effect of the trunk movements which were the focus of the study.
-Analysis of the filler trials in Experiment~1 indicated that visual information about a speaker can be integrated into the early stages of reference comprehension, and that this information can be both static and dynamic.
-Experiment~1 also showed that the visual world paradigm can be adapted to include video stimuli of the speaker without detracting from fixation-biases, even when this video stimuli is changing during the presentation of speech.
-This aligns with research suggesting that listeners may extract information about gestures through peripheral vision \citep[See e.g.][]{Gullberg2006}.
+In Experiment~1, visual cues in the form of trunk movements were found to have a marginal effect on listeners' judgements of deception, and did not influence eye- and mouse-movements in the 800~ms following referent onset, which showed an overall tendency to fixate on and move towards the referent over the distractor.
+Additional analyses indicated that other types of visual cues used in filler trials (namely adaptor gestures) were associated with more judgements that the speaker was dishonest. 
+%filler trials, more cues, diluted effect?
+
+We therefore conducted Experiment~2, to directly investigate the time-course of deception judgements based on adaptor gestures.
+In the same paradigm, videos in Experiment~2 showed the speaker either producing an adaptor gesture or sitting motionless, and there were no filler trials. 
+Results indicate a reliable association between adaptor gesturing and perceived dishonesty.
+Furthermore, this association was apparent at the early stages of comprehension, with participants' tendency to fixate on, and move towards, the referent (over the distractor) more as time increased being attenuated following videos showing the speaker producing an adaptor gesture.
+
+
+
+The findings presented here are consistent with previous research on beliefs about and judgements on visual cues to deception showing that listeners perceive a range of nonverbal behaviours to indicate deceit \citep[e.g.][]{Zuckerman1981, Akehurst1996, Vrij2000}, and provides a visual-modality parallel with the findings from \citet{Loy2017} showing that fluency of speech influences judgements of whether a speaker is lying.
+
+%but not all cues. maybe need more reliable more cue ocntext-
+
+
+
+
+aligning with research suggesting that listeners may extract information about gestures through peripheral vision \citep[See e.g.][]{Gullberg2006}.
+
 To directly investigate the time-course of judgements based on adaptor gestures in a fully counterbalanced design, we conducted Experiment~2, which confirmed that participants engaged in rapid integration of visual information into pragmatic judgements of deception.
 
-The findings presented here are consistent with previous research on beliefs about and judgements on visual cues to deception showing that listeners perceive a range of nonverbal behaviours to indicate deceit \citep[e.g.][]{Zuckerman1981, Akehurst1996, Vrij2000}, and provides a visual-modality parallel with the findings from \citet{Loy2017} showing that fluency of speech influences judgements of whether a speaker is lying
+The findings presented here are consistent with previous research on beliefs about and judgements on visual cues to deception showing that listeners perceive a range of nonverbal behaviours to indicate deceit \citep[e.g.][]{Zuckerman1981, Akehurst1996, Vrij2000}, and provides a visual-modality parallel with the findings from \citet{Loy2017} showing that fluency of speech influences judgements of whether a speaker is lying.
 Our findings, together with those from \citet{Loy2017}, suggest that listeners may have an implicit bias to judge a speaker as honest in the absence of any obvious potential cue to deception. 
 Additionally, they align with the `truth bias' commonly observed in deception literature, in which listeners have a tendency to judge a speaker as truthful, even when explicitly told the speaker may be dishonest \citep{Vrij2000}.
 
@@ -431,78 +495,3 @@ To better understand how information in different modalities affect comprehensio
 \bibliography{./GCD}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Filler trials}
-
-Filler trials (numbering 800) were analysed in the same way, with two differences. 
-Firstly, in all models, by-item random effects for visual cue (Now comprising three levels: no cue, different postures, and adaptor gesturing) were removed as they were not counterbalanced across referents.
-Secondly, eye- and mouse- tracking analyses was extended to 1100~ms following onset of the referent. 
-This decision was based on the fact that the longest referent in filler trials was 1062~ms. 
-Filler trials resulting in no mouse click on either object (n=3) were excluded from these analyses.
-%JK mouse samples removed?
-
-\subsection{Object clicks} 
-Across the experiment, participants clicked on the referent in 55\% of filler trials and the distractor in 45\%, matching the clicks recorded in critical trials
-Table \ref{table:v1_filler_clicks} shows the percentage of clicks across all participants to either object following videos showing different types of cue.
-
-Analysis of objects clicked found that videos showing no cue were associated with more clicks to the referent (\resultsLog{0.59}{0.20}{=0.003}), and videos showing the speaker producing adaptor gestures (but not those showing the speaker in different postures) were associated with more clicks to the distractor, indicating more final judgements of deception (\resultsLog{-0.44}{0.16}{=0.006}).
-The type of cue shown in the video not associated with any significant changes in the time taken by participants to click on an object.
-
-\begin{table}
-\caption{Breakdown of mouse clicks in filler trials recorded on each object (referent or distractor) by visual cue for Experiment~1}
-\label{table:v1_filler_clicks}
-\begin{tabularx}{\linewidth}{YYYYY}
-\hline
-& No-Cue & Different Posture & Adaptor Gesture \\
-Clicks to Referent & 256 (64.5\%) & 96 (48.0\%) & 83 (41.5\%) \\ 
-Clicks to Distractor & 141 (35.5\%) & 104 (52.0\%) & 117 (58.5\%) \\
-\hline
-\end{tabularx}
-\end{table}
-
-\subsection{Eye movements}
-Analysis of filler trials (conducted from referent onset to 1100~ms) showed the same tendency to fixate on the referent over the distractor in trials presenting a video showing the speaker producing no cue (\resultsLM{1.05}{0.34}{3.13}).
-Figure \ref{fig:v1_eye2} shows the time course of fixations to referents and distractors in filler trials for the 2000~ms from referent onset, split by the type of cue shown in the video (no cue, different postures, or adaptor gesturing).
-Relative to videos showing no cue, when participants viewed videos which presented the speaker either in a different posture or producing an adaptor gesture, the increasing bias over time toward the referent was significantly reduced (\resultsLM{-0.97}{0.13}{=-7.23} and \resultsLM{-0.58}{0.13}{=-4.38} respectively).
-
-\begin{figure}[Ht]
-  \centering
-	\includegraphics[width=\linewidth]{./img/e7_fixations_filler.pdf}
-  \caption{Eye-tracking results for filler trials in Experiment~1: Proportion of fixations to each object (referent or distractor) and the video, from 0 to 2000 ms post-referent onset, calculated out of the total sum of fixations for each 20~ms time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
-  \label{fig:v1_eye2}
-\end{figure}
-
-
-\subsection{Mouse movements}
-Figure \ref{fig:v1_mouse2} shows the time course of the proportions of cumulative distance the mouse moved towards the referent and distractor in critical trials for 2000~ms from referent onset, split by each type of cue.
-Analysis of mouse movements in filler trials also patterned with analysis of eye-movements for these trials:
-Relative to videos showing no cue, the tendency to move towards the referent over the distractor (\resultsLM{1.08}{0.23}{4.62}) was significantly reduced for videos showing the speaker either in a different posture or producing an adaptor gesture (\resultsLM{-0.54}{0.12}{-4.52} and \resultsLM{-0.86}{0.12}{-7.19} respectively).
-
-\begin{figure}[Ht]
-  \centering
-	\includegraphics[width=\linewidth]{./img/e7_mouse_filler.pdf}
-  \caption{Mouse-tracking results for filler trials in Experiment~1: Proportion of cumulative distance traveled toward each object from 0 to 2000 ms post-referent onset. Proportions were calculated from the total cumulative distance participants moved the mouse until that time bin (from video onset, when cursor was made visible). Shaded areas represent $\pm$ 1 standard error of the mean.}
-  \label{fig:v1_mouse2}
-\end{figure}
-
-
