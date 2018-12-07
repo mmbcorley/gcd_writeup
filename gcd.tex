@@ -131,39 +131,33 @@ Our aim was to investigate whether and when gestural cues would be associated wi
 Twenty-four self-reported native speakers of English were recruited from the University of Edinburgh community, and took part in the experiment in return for a payment of \pounds{}4.
 Participants all had normal or corrected-to-normal vision, and were all right-handed mouse users.
 
-\subsection{Materials}
+\subsection{Materials}\todo{massively rewritten for clarity:  please check}
 Visual stimuli consisted of the same~120 line drawings from \citet{Snodgrass1980} which were used in \citet{Loy2017}, sixty of which served as the object named as hiding the treasure and the other sixty as distractors.
-Referents were randomly paired with distractors and presented across sixty trials (20~critical trials and 40~fillers). 
-Critical referents and distractors were matched for both ease of naming and familiarity.
-
+Referents were randomly paired with distractors and presented across sixty trials (20~critical trials and 40~fillers). Critical referents and distractors were matched for both ease of naming and familiarity.
 Each pair of referents was associated with an audio recording of fluent speech specifying the image as the object that the treasure was hidden behind (``The treasure is behind the <referent>''), taken from \citet{Loy2017}.
-
-New to the present experiment, trials also presented a video of a person who was purported to be the speaker of the utterances. 
-Videos showed the person either producing a gestural cue, or sitting motionless in a neutral posture.
-The face shown in the video was pixelated, to allow different videos to be associated with a given audio recording without providing evidence that the visual and auditory channels were recorded separately.
-This allowed us to pair audio recordings with different gestures, ensuring that any differences in listener behaviour observed could be attributed entirely to the visual channel.
 
 % videos to be presented alongside different utterances and maintain the illusion that for each trial the spoken utterance heard was the corresponding audio track captured with the video (and produced by the person in the video).
 
-Thirty-five videos were created to pair with audio stimuli which had been previously recorded.
+Thirty-five videos were created to use with the previously-recorded audio stimuli.
 For each video, a volunteer repeated the phrase \spex{the treasure is behind the <object>} while performing a given gesture (trunk movement, adaptor gesture, different static posture).
 % This ensured that when videos were subsequently edited to pixelate the face, pixel movement loosely patterned with the playback of utterances when presented in the experiment). \todo{I can't work out how 35 becomes 60?}
 Videos showed the speaker seated at a table upon which rested a tablet computer (on which the referent, distractor, and treasure were purported to be displayed).
+The face shown in each video was pixelated, to allow different videos to be associated with different audio recordings without providing evidence that the visual and auditory channels had been recorded separately.
 
-The soundtracks from the video recordings were replaced with fluent audio recordings from \citet{Loy2017}.
-For the 20~critical trials, the audio recordings were paired with 10~videos showing the speaker producing no cue (sitting motionless with her hands on either side of the tablet computer), and five different videos of trunk movements (each used in two different critical trials).
-In the 40~filler trials, the videos showing no cue from critical trials were presented in two trials each, and 20 videos of other gestures (10 showing adaptor gesturing, and 10~showing the speaker motionless but in a different posture) were each presented once.
-Over the course of the experiment each participant saw 30 videos of the speaker producing no cue, and 30 videos of the speaker producing a potential cue to deception (10~in critical trials, showing trunk movements; 10~fillers with adaptor gestures; 10~fillers showing different postures).
-
-%%%MC FIXME
+The soundtracks from the video recordings were replaced with the fluent audio recordings from \citet{Loy2017}.
 We identified a timepoint in each video at which, according to our judgement, it would be natural for audio to begin. 
-For videos showing a trunk movement, this was the frame of the video at which the movement ended, meaning that participants were presented with no overlap between the movement and speech.
-These were matched in videos showing no cue, thus controlling for any sensitivity to the duration of video prior to speech (which could be interpreted as speech-initiation time, in turn a potential cue to deception). 
-For videos showing an adaptor gesture the amount of overlap between the visual cue and speech varied, and was matched in videos showing the speaker in different static postures.
+For videos showing a trunk movement, this was the frame of the video at which the movement ended, meaning that there was no overlap between the target gesture and the ensuing speech.
+The time to audio onset was matched in matched videos showing no cue, thus controlling for any sensitivity to the duration of video prior to speech.% (which could be interpreted as speech-initiation time, in turn a potential cue to deception). 
+For videos showing an adaptor gesture the amount of overlap between the visual cue and speech varied according to the experimenters' judgements of what appeared natural; time to audio onset was matched in videos showing the speaker in different static postures.
+For videos which showed different (static) poses, \todo{What was the case for these?}
 
-As with \citet{Loy2017}, 20 critical referents were counterbalanced across two lists. 
-Each list contained 10 trials showing a trunk movement video and 10 trials showing a video showing no cue.
-The remaining 40 referents were randomly paired with one of the remaining videos (10 showing adaptor gestures, 10 showing different postures, 20 showing no cue) for each participant, with no repetition of referents across videos.
+In the 20~critical trials, the audio recordings were paired with 10~videos showing the speaker producing no cue (sitting motionless with her hands on either side of the tablet computer), and five~different videos of trunk movements (each used in two different critical trials).
+The critical trials were counterbalanced across two lists, such that audio recordings paired with a motionless speaker in one list were paired with trunk movements in the other.
+
+Forty~filler trials were added to each list.  In these trials, the 10~videos showing no cue from critical trials were presented in two trials each, and 20~videos of other gestures (10~showing adaptor gesturing, and 10~showing the speaker motionless but in a different posture) were each presented once.
+For each participant, each of these 40~videos was randomly paired with a pair of images and an audio track, with no repetition of referents across items.
+
+Over the course of the experiment each participant saw 30~videos in which the speaker produced no gestural cue, and 30~videos of the speaker producing a potential cue to deception (10~in critical trials, showing trunk movements; 10~fillers with adaptor gestures; 10~fillers showing different postures).
 
 \subsection{Procedure}
 The experiment was presented using OpenSesame version~3.1 \citep{Mathot2012}.
@@ -174,12 +168,12 @@ Eye movements, mouse coordinates and object clicked (referent or distractor) wer
 
 Figure \ref{fig:v1_trial} represents a sample trial from the experiment. 
 Between trials, participants underwent a manual drift correction to ensure accurate recordings from the eye tracker.
-After this the central fixation dot turned red for 500ms to signify progression to the trial. 
-This was replaced by two images corresponding to the referent and distractor, each measuring 150~$\times$~150 pixels, centered vertically and positioned such that the center of each object was 15\% from either edge of the display. 
-The relative positions (left vs.\@ right) of referents and distractors was randomly chosen, with the constraint that each participant saw the referent in an equal number of critical and filler trials on the left as on the right.
-This display of two images lasted for 2000~ms before the video was added and the cursor was centred and made visible.
+After this, the central fixation dot turned red for 500ms to signify progression to the trial. 
+This was replaced by two images corresponding to the referent and distractor, each measuring 150~$\times$~150 pixels, centered vertically and positioned such that the center of each object was~15\% from either edge of the display. 
+The positions (left vs.\@ right) of referents and distractors were randomly chosen, with the constraint that for each participant, referents occurred equally often on each side, separately for critical and filler trials.
+2000~ms after the onset of the image display, a gesture/speech video was added to the screen, and the mouse pointer was centred and made visible.
 The video, measuring 266~$\times$~284 pixels, was displayed with the bottom edge at the vertical midpoint of the screen and centered horizontally.
-Playback of the utterance began at the assigned frame of the video.
+Playback of the audio recording began at the assigned frame of the video (see materials above).
 The trial ended once the participant clicked on either object, or timed-out 5000~ms after onset of the referent noun, at which point participants saw a message telling them to click on an object faster.
 
 \begin{figure}[Ht]
@@ -189,28 +183,28 @@ The trial ended once the participant clicked on either object, or timed-out 5000
   \label{fig:v1_trial}
 \end{figure}
 
-Participants were told that the videos they saw were recordings taken from a previous experiment, in which one participant was tasked with describing the location of some hidden treasure with the aim of misleading the other participant into choosing the wrong location.
-To emphasise this, participants were shown a staged photograph of two people purportedly participating in this previous experiment. 
+Participants were told that they were watching recordings taken from a previous experiment, in which one participant was tasked with describing the location of some hidden treasure with the aim of misleading another participant into choosing the wrong location.
+To emphasise this, participants were shown a photograph of two people purportedly participating in this previous experiment. 
 Participants were told that the speakers in the previous experiment had lied approximately half of the time. 
 Participants were instructed to click on the object behind which \textit{they believed} the treasure to be hidden, with the overall aim of accumulating as much treasure as they could across the experiment.
 Participants received no feedback after their object clicks, except on bonus trials, which are described in the next section.
+They were told that the top scorers would be able to enter their names on a high-score table, which was shown at the beginning of the experiment. 
 
 The order of trials was randomly assigned on each run of the experiment.
-Participants completed five practice trials (one of which was presented as a bonus round) prior to the main experiment. 
+Participants completed five practice trials (one of which was presented as a bonus trial) prior to the main experiment. 
 Two of these presented a video showing no cue, two displayed a video of the speaker in different postures, and one displayed a video of the speaker making a trunk movement.
 
 
 \subsection{Bonus Trials}
 To maintain motivation throughout the study, participants were told that there were a number of ``hidden bonus rounds'' which offered more treasure than regular rounds.
-25\% of filler trials (half presenting a video showing either adaptor gesturing or a different posture; half presenting a video showing no cue) were randomly designated as bonus rounds for each participant.
+25\% of filler trials (half including a gestural cue; half presenting a video showing no cue) were randomly designated as bonus rounds for each participant.
 These trials were visually identical to regular trials.
 However, following the mouse click (regardless of the object chosen), a message was displayed informing participants that they had successfully located bonus treasure.
-Participants were told that the top scorers would be able to enter their names on a high-score table, which was shown at the beginning of the experiment. 
 
 \subsection{Post-test Questionnaire}
 Participants were asked to complete a short post-test questionnaire which asked whether participants had noticed anything odd about the visual or audio stimuli.
 Any participant who indicated that they had noticed anything unusual was then questioned further, to decide whether they believed that the speech and gesture had been produced naturally and simultaneously.
-All participants were subsequently debriefed, during which they were told that the audio and video were created separately and stitched together, and asked again verbally if they noticed anything unusual in that respect. 
+All participants were subsequently debriefed, during which they were told that the audio and video were created separately and stitched together, and asked again verbally if they had noticed anything unusual in that respect. 
 Responses to the questionnaire and debrief were used to determine whether participants should be excluded from the analysis.
 
 \section{Results}
@@ -218,22 +212,25 @@ Responses to the questionnaire and debrief were used to determine whether partic
 \subsection{Analysis}
 Analysis of critical trials was carried out in R version~3.4.4 \citep{Rbase2017}, using the lme4 package version~1.1-17 \citep{Bates2015}. 
 Data from four participants who indicated suspicion of the supposed origins of the audiovisual stimuli based on the post-test questionnaire and/or debrief were removed from all analyses, leaving data from twenty participants. 
-Of 400 critical trials, one trial in which participants did not click on either the referent or distractor was excluded from all analyses.
+Of the resultant 400~critical trials, one trial, in which the participant did not click on either the referent or distractor, was excluded from all analyses.
 
-Object clicked (referent or distractor) was modelled using mixed effects logistic regression, with a fixed effect of nonverbal behaviour in the video (no cue vs.\@ trunk movement, dummy coded with no cue as the reference), with random intercepts and slopes for nonverbal behaviour both by-participant and by-item.
-Reaction times (measured from referent onset) were log transformed and modelled with the same fixed and random effect structure using mixed effects linear regression.
+The object clicked (referent or distractor) was modelled using mixed effects logistic regression, with a fixed effect of nonverbal behaviour in the video (no cue vs.\@ trunk movement, dummy coded with no cue as the reference), and with random intercepts and slopes for nonverbal behaviour both by-participant and by-item.
+Time to click an object\todo{this needs more: was ref/D a predictor, or were only referents included?} (measured from referent onset) were log transformed and modelled with the same fixed and random effect structure using mixed effects linear regression.
 
-Eye fixation data was averaged into 20~ms bins (of 10 samples) prior to analysis.
-For each bin, we calculated the proportions of time spent fixating the referent or the distractor, resulting in a measure of the proportions of fixations on either object over time.
+Eye fixation data was averaged into 20~ms bins (of 10~samples) prior to analysis.
+For each bin, we calculated the proportions of time spent fixating each of the referent and the distractor.%, resulting in a measure of the proportions of fixations on either object over time.
+
 The position of the mouse was sampled every 40~ms.
 Using the $X$ coordinates only, we calculated the number of screen pixels moved and the direction of movement (towards either referent or distractor).
 We then calculated the cumulative distance travelled towards each object over time as a proportion of the cumulative distance travelled in both directions from referent onset up until that time bin.
-Movements beyond the outer edge of either object were considered to be `overshooting' and were not included in calculations (0.8\% of samples).
-Eye  and mouse  biases were calculated from the proportions of referent to distractor fixations, and were subsequently empirical logit transformed \citep{Barr2008}. 
-In these measures, a value of zero indicates no bias towards either object, and positive and negative values indicate a bias towards the referent and distractor respectively.
+Movements beyond the outer edge of either object were considered to be `overshooting' and were not included in calculations (0.8\%~of samples).
 
-As in previous studies using the treasure game paradigm \citep{King2018,Loy2017}, eye  and mouse  tracking analyses were conducted on a time-window beginning at referent onset and extending for 800~ms, just beyond the duration of the longest critical referent (776~ms).
-Eye and mouse data was modelled over this time window using linear mixed effects models, with fixed effects of time from referent onset (seconds), nonverbal behaviour (dummy coded with no cue as reference level), and their interaction.
+For both eye movements and mouse movements, biases were calculated from the proportions of referent to distractor fixations.\todo{mouse movements don't have fixations}
+These were subsequently empirical logit transformed \citep{Barr2008},
+yielding measures for which a value of zero indicates no bias towards either object, and positive and negative values indicate a bias towards the referent and distractor respectively.
+
+As in previous studies using the treasure game paradigm \citep{King2018,Loy2017}, eye  and mouse  tracking analyses were conducted on a time-window beginning at referent onset and extending for 800~ms, just beyond the duration of the longest critical referent name (776~ms).
+Eye and mouse movement data was modelled over this time window using linear mixed effects models, with fixed effects of time from referent onset (seconds), nonverbal behaviour (dummy coded with `no cue' as reference level), and their interaction.
 Random intercepts and slopes for time and nonverbal behaviour were included both by-item and by-participant.
 Following \citet{Baayen2008}, we considered effects in these models to be significant where $|t|>2$.
 
@@ -258,9 +255,9 @@ Clicks to Distractor & 75 (37.5\%) & 100 (50.3\%) \\
 \end{table}
 
 \subsection{Eye movements}
-Figure \ref{fig:v1_eye1} shows the time course of fixations to referents and distractors in critical trials for the 2000~ms from referent onset, split by the type of nonverbal behaviour presented in the video. \todo{JK > MC: I can't seem to word these results in a way that is intuitive to you. See .tex for fixef, and if you can give an example of what wording would be most clear, then that would be great.}
+Figure \ref{fig:v1_eye1} shows the time course of fixations to referents and distractors in critical trials for the 2000~ms from referent onset, split by the type of nonverbal behaviour presented in the video.
 Analysis conducted over the 800~ms period from referent onset showed that, following videos showing no cue to deception, participants became increasingly likely to fixate the referent over the distractor as this window progressed (as indicated by a main effect of time \resultsLM{2.23}{0.67}{=3.34}).
-Importantly, there was no interaction of time with nonverbal behaviour, indicating that the presence of trunk movements did not influence participants' increasing fixation bias toward the referent. 
+Importantly, there was no interaction of time with nonverbal behaviour, indicating that the presence of trunk movements did not influence participants' increasing fixation bias toward the referent.\todo{this is good as-is!}
 
 %remember that time is not centered
 %                              Estimate Std. Error t value
@@ -273,7 +270,7 @@ Importantly, there was no interaction of time with nonverbal behaviour, indicati
 \begin{figure}[Ht]
   \centering
 	\includegraphics[width=\linewidth]{./img/e7_fixations_crit.pdf}
-  \caption{eye tracking results for critical trials in Experiment~1: Proportion of fixations to each object (referent or distractor) and the video, from 0 to 2000 ms post-referent onset, calculated out of the total sum of fixations for each 20~ms time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
+        \caption{Eye~tracking results for critical trials in Experiment~1: Proportion of fixations to each object (referent or distractor) and the video, from 0 to 2000~ms post-referent onset, calculated out of the total sum of fixations for each 20~ms time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
   \label{fig:v1_eye1}
 \end{figure}
 
@@ -287,7 +284,7 @@ Videos showing the speaker producing a trunk movement did not influence this inc
 \begin{figure}[Ht]
   \centering
 	\includegraphics[width=\linewidth]{./img/e7_mouse_crit.pdf}
-  \caption{mouse tracking results for critical trials in Experiment~1: Proportion of cumulative distance traveled toward each object from 0 to 2000 ms post-referent onset. Proportions were calculated from the total cumulative distance participants moved the mouse until that time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
+  \caption{Mouse tracking results for critical trials in Experiment~1: Proportion of cumulative distance traveled toward each object from 0 to 2000 ms post-referent onset. Proportions were calculated from the total cumulative distance participants moved the mouse until that time bin. Shaded areas represent $\pm$ 1 standard error of the mean.}
   \label{fig:v1_mouse1}
 \end{figure}
 
